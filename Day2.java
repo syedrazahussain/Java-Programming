@@ -7,6 +7,8 @@ class Day2 {
         //in variables we can decelare like separte lines
         int a=10;
         int b=20;
+        System.out.println(a);
+        System.out.println(b);
 
         //single line declaration
         int aa,bb,cc;
