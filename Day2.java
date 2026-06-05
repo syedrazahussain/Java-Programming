@@ -9,6 +9,7 @@ class Day2 {
         int b=20;
         System.out.println(a);
         System.out.println(b);
+        
 
         //single line declaration
         int aa,bb,cc;
@@ -61,6 +62,7 @@ class Day2 {
                     double myDouble1 = 9.74d;
                     int myInt1 = (int) myDouble1;
                     System.out.println(myDouble1);
+                    System.out.println(myInt1);
                     System.out.println(myInt1);
 
 
