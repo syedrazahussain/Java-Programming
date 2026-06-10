@@ -124,6 +124,8 @@ class D2 extends A2 {
 
 public class Day6 {
     public static void main(String[] args) {
+
+        //objects
         Student s1 = new Student();
         System.out.println(s1.id);
         System.out.println(s1.s);
