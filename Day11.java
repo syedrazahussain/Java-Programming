@@ -45,15 +45,37 @@ class Day11 {
         // }
 
         // question 4 : Reverse number
+        // System.out.println("Enter any number : ");
+        // int num2 = sc.nextInt();
+        // int revnum = 0;
+        // while(num2 > 0) {
+        // int rem = num2 % 10;
+        // revnum = revnum * 10 + rem;
+        // num2 = num2 / 10;
+        // }
+        // System.out.println(revnum);
+
+        // question 5 :palindrome number or not
+
         System.out.println("Enter any number : ");
-        int num2 = sc.nextInt();
-        int revnum = 0;
-        while(num2 > 0) {
-            int rem = num2 % 10;
-            revnum = revnum * 10 + rem;
-            num2 = num2 / 10;
+        int num3 = sc.nextInt();
+        int originalnum = num3;
+        int revnum1 = 0;
+        while (num3 > 0) {
+            int rem1 = num3 % 10;
+            revnum1 = revnum1 * 10 + rem1;
+            num3 = num3/10;
+
+
         }
-        System.out.println(revnum);
+        if(originalnum == revnum1){
+            System.out.println("It is a palindrom");
+
+        }
+        else{
+            System.out.println("Not a palindrom");
+
+        }
         
 
     }
