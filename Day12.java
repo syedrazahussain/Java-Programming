@@ -6,7 +6,7 @@ import java.util.Scanner;
 class Day12 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        question 1 : The sum of the digits
+      //  question 1 : The sum of the digits
 
         System.out.println("Enter any number : ");
         int no = sc.nextInt();
