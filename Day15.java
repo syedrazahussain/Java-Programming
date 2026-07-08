@@ -96,7 +96,36 @@ class Day15 {
             System.out.println("Not eligible");
         }
     }
-    static void
+    static void checkevenoroddWith2num(){
+        System.out.println("Enter any 2 values : ");
+        int a = sc.nextInt();
+        int b = sc.nextInt();
+        if(a%2 == 0 && b%2 == 0){
+            System.out.println("Both are even ");
+        }
+        else if (a%2 == 1 && b%2 ==1){
+            System.out.println("Bothe are odd");
+        }
+        else if(a%2 == 1 || b%2 ==0 && a%2 ==0 || b%2 == 1){
+            System.out.println("One is even and one is odd ");
+        }
+    }
+
+    static void checkalpahbet(){
+        System.out.println("Enter Character : ");
+        char ch = sc.next().charAt(0);
+        if(ch >= 'a' && ch <= 'm'){
+            System.out.println("Its lies between A - M");
+        }
+        else if(ch >= 'n' && ch <= 'z'){
+            System.out.println("Its lies between N - Z");
+        }
+        else {
+            System.out.println("Invalid char");
+        }
+    }
+
+    
     public static void main(String[] args) {
 
         // System.out.println("Enter A Value : ");
@@ -127,7 +156,10 @@ class Day15 {
         // checkVotingAge();
 
         //Q7. Take two numbers and determine whether both are even, both are odd, or one is even and one is odd
-        checkevenoroddWith2num();
+        // checkevenoroddWith2num();
+
+        //Q8. Take a alphabet character and check if it lies between ' a' and 'm' or 'n' and 'z'
+        checkalpahbet();
 
     }
 }
