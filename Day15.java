@@ -87,8 +87,16 @@ class Day15 {
         }
     }
 
+    static void checkVotingAge() {
+        System.out.println("Enter Age : ");
+        int age = sc.nextInt();
+        if (age >= 18) {
+            System.out.println("You are eligible ");
+        } else {
+            System.out.println("Not eligible");
+        }
+    }
     static void
-
     public static void main(String[] args) {
 
         // System.out.println("Enter A Value : ");
@@ -115,8 +123,11 @@ class Day15 {
         // afternoon","Good Evening","Good Night"
         // greetingwithHour();
 
-        //Q6. Check Voting eligibilty for a given age(18+)
-        checkVotingAge();
+        // Q6. Check Voting eligibilty for a given age(18+)
+        // checkVotingAge();
+
+        //Q7. Take two numbers and determine whether both are even, both are odd, or one is even and one is odd
+        checkevenoroddWith2num();
 
     }
 }
