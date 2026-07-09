@@ -146,7 +146,7 @@ class Day16 {
         int number = sc.nextInt();
         int temp = number;
         int digits = 0;
-         while (temp > 0) {
+        while (temp > 0) {
 
             number = temp % 10;
 
@@ -154,17 +154,94 @@ class Day16 {
 
             digits++;
 
-         }
-         if(digits == 1){
+        }
+        if (digits == 1) {
             System.out.println("Single Digit hai");
-         }
-         if(digits == 2){
+        }
+        if (digits == 2) {
             System.out.println("double Digit hai");
-         }
-         if(digits >= 3){
+        }
+        if (digits >= 3) {
             System.out.println("multi Digit hai");
-         }
+        }
 
+    }
+
+    static void checkmultipleof7orends7() {
+        System.out.println("Enter Any number :");
+        int number = sc.nextInt();
+        int temp = number;
+        int digits = 0;
+        int originalnum = number;
+        int lastvalue = 0;
+
+        number = temp % 10;
+
+        temp = temp / 10;
+
+        digits++;
+        if (digits == 1) {
+
+            lastvalue = number;
+        }
+
+        System.out.println(lastvalue);
+        if (originalnum % 7 == 0 || lastvalue == 7) {
+            System.out.println("Yes");
+
+        } else {
+            System.out.println("No");
+        }
+
+    }
+
+    static void determineQuadrant() {
+        System.out.println("Enter X axis : ");
+        int x = sc.nextInt();
+        System.out.println("Enter Y-axis : ");
+        int y = sc.nextInt();
+        System.out.println("Coordinates are " + "(" + x + "," + y + ")");
+
+        if (x > 0 && y > 0) {
+            System.out.println("1st Quadrant");
+        } else if (x < 0 && y > 0) {
+            System.out.println("2nd Quadrant");
+
+        } else if (x < 0 && y < 0) {
+            System.out.println("3rd Quadrant");
+
+        } else if (x > 0 && y < 0) {
+            System.out.println("4th Quadrant");
+
+        } else if (x == 0 && y == 0) {
+            System.out.println("Origin");
+        } else if (x == 0) {
+            System.out.println("y-axis");
+        } else if (y == 0) {
+            System.out.println("X-axis");
+        }
+    }
+
+    static void checkcurrencyevenlydivided() {
+        System.out.println("Enter an $Amount : ");
+        int amount = sc.nextInt();
+        int remaining = 0;
+        int originalamount = amount;
+        amount = originalamount / 2000;
+        remaining = originalamount % 2000;
+        System.out.println("Remaining" + remaining);
+        amount = remaining / 500;
+        remaining = remaining % 500;
+        System.out.println("Remaining" + remaining);
+        amount = remaining / 100;
+        remaining = remaining % 100;
+        System.out.println("Remaining" + remaining);
+
+        if (remaining == 0) {
+            System.out.println("Possible");
+        } else {
+            System.out.println("Not possible");
+        }
     }
 
     public static void main(String[] args) {
@@ -182,7 +259,15 @@ class Day16 {
         // Q4. Check whether a given integer is single digit,double digir or multi digit
         // checksinglemultidigit();
 
-        //Q5. check if a 
+        // Q5. check if a number is a multiple of 7 or ends with 7
+        // checkmultipleof7orends7();
+
+        // Q6. Take coordinates (x,y) and determine which quadrant the point lies in
+        // determineQuadrant();
+
+        // Q7. check if an amount can be evenly divided into 2000,500, and 100 currency
+        // notes
+        checkcurrencyevenlydivided();
 
     }
 }
