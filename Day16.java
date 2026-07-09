@@ -246,24 +246,24 @@ class Day16 {
 
     public static void main(String[] args) {
         // Q1. Take a 3-digit number and check if all digits are distinct
-        // checkDistinct();
+        checkDistinct();
 
         // Q2. Take a 3 -digit number and determine if th emiddle digit is the
         // largest,smallest or neither
-        // checkmiddleDigit();
+        checkmiddleDigit();
 
         // Q3 . take a 4 - digit number and check if the first and last digits arev
         // equal
-        // checkfirstandlastequality();
+        checkfirstandlastequality();
 
         // Q4. Check whether a given integer is single digit,double digir or multi digit
-        // checksinglemultidigit();
+        checksinglemultidigit();
 
         // Q5. check if a number is a multiple of 7 or ends with 7
-        // checkmultipleof7orends7();
+        checkmultipleof7orends7();
 
         // Q6. Take coordinates (x,y) and determine which quadrant the point lies in
-        // determineQuadrant();
+        determineQuadrant();
 
         // Q7. check if an amount can be evenly divided into 2000,500, and 100 currency
         // notes
