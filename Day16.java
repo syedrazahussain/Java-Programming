@@ -244,6 +244,51 @@ class Day16 {
         }
     }
 
+    static void checknumberRange() {
+        System.out.println("Enter number [100-999] : ");
+        int number = sc.nextInt();
+        if (number >= 100 && number <= 999) {
+            System.out.println("Yes it lies between [100-999]");
+        } else {
+            System.out.println("NOt lies");
+        }
+
+    }
+
+    static void calthirdangle() {
+        System.out.println("Enter first angle ");
+        int firstAngle = sc.nextInt();
+        System.out.println("Enter Second angle");
+        int secondAngle = sc.nextInt();
+        int TotalAngleofTraingle = 180;
+
+        TotalAngleofTraingle = TotalAngleofTraingle - (firstAngle + secondAngle);
+        System.out.println("The Third Angle is : " + TotalAngleofTraingle);
+    }
+
+    static void checkPerfectSquare() {
+        System.out.println("Enter Any number ");
+        int number = sc.nextInt();
+        int square = 0;
+        boolean found = false;
+        for (int i = 1; i <= number; i++) {
+            square = i * i;
+            if (square == number) {
+
+                found = true;
+                break;
+
+            }
+
+        }
+        if (found == true) {
+            System.out.println("Perfect Square");
+        } else {
+            System.out.println("Not Perfect number");
+        }
+
+    }
+
     public static void main(String[] args) {
         // Q1. Take a 3-digit number and check if all digits are distinct
         checkDistinct();
@@ -269,5 +314,14 @@ class Day16 {
         // notes
         checkcurrencyevenlydivided();
 
+        // Q8. check if a number lies within the range[100,999]
+        checknumberRange();
+
+        // Q9. Take two angles of a triangle and compute the third angle
+        calthirdangle();
+
+        // Q10. Check whether a number is a perfect square(without the square root
+        // function)
+        checkPerfectSquare();
     }
 }
