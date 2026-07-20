@@ -97,6 +97,92 @@ class Day21 {
 
     }
 
+    static void printallfactors() {
+        System.out.println("Enter Any number : ");
+        int number = sc.nextInt();
+        for (int i = 1; i <= number - 1; i++) {
+            if (number % i == 0) {
+                System.out.println(i);
+            }
+        }
+    }
+
+    static void sumofallfactors() {
+
+        System.out.println("Enter any number : ");
+        int number = sc.nextInt();
+        int sum = 0;
+        for (int i = 1; i <= number; i++) {
+            if (number % i == 0) {
+                sum += i;
+            }
+
+        }
+        System.out.println("The sum is : " + sum);
+
+    }
+
+    static void checksumoffactorial() {
+        System.out.println("Enter any number : ");
+        int number = sc.nextInt();
+        int sum = 0;
+        int temp = number;
+        int digit = 0;
+        while (temp > 0) {
+            int factorial = 1;
+            int digits = temp % 10;
+            digit++;
+            for (int i = 1; i <= digits; i++) {
+
+                factorial *= i;
+            }
+            sum += factorial;
+            temp = temp / 10;
+
+        }
+        if (sum == number) {
+            System.out.println("Strong number ");
+        } else {
+            System.out.println("Not");
+        }
+    }
+
+    static void printarithmetic() {
+        System.out.println("Enter a value : ");
+        int a = sc.nextInt();
+        System.out.println("Enter d value : ");
+        int d = sc.nextInt();
+        System.out.println("Enter n value : ");
+        int n = sc.nextInt();
+        int current = a;
+
+        for (int i = 1; i <= n; i++) {
+
+            System.out.print(current + " ");
+            current += d;
+
+        }
+
+    }
+
+    static void printgeometric() {
+        System.out.println("Enter a value : ");
+        int a = sc.nextInt();
+        System.out.println("Enter d value : ");
+        int r = sc.nextInt();
+        System.out.println("Enter n value : ");
+        int n = sc.nextInt();
+        int current = a;
+
+        for (int i = 1; i <= n; i++) {
+
+            System.out.print(current + " ");
+            current *= r;
+
+        }
+
+    }
+
     public static void main(String[] args) {
         // Q1. Print the squares of number from 1 to n
         // printsquaresnumber();
@@ -112,5 +198,21 @@ class Day21 {
 
         // Q5. Find LCM of two numbers using loops.
         // printLcmNumber();
+
+        // Q6. print all factors of a given number.
+        // printallfactors();
+
+        // Q7. find the sum of all factors of a number.
+        // sumofallfactors();
+
+        // Q8. check if a number is strong number (sum of factorial of digits = number)
+        // checksumoffactorial();
+
+        // Q9. print first n terms of an arithmetic progression (a,d)
+        // printarithmetic();
+
+        // Q10. print first n terms of an geometric progression (a,r)
+        printgeometric();
+
     }
 }
