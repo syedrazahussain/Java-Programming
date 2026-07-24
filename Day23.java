@@ -59,6 +59,17 @@ class Day23 {
             System.out.println();;
         }
     }
+    static void printsequenceabc(int n){
+          char ch = 'A';
+        for(int i =1; i<=n;i++){
+            for(int j = 1; j <=i;j++){
+                System.out.print(ch+" ");
+                ch++;
+            }
+            System.out.println();
+        }
+
+    }
 
     public static void main(String[] args) {
         // Q1. print numbers in an increasing sequence (1,12,123,12345)
@@ -75,5 +86,9 @@ class Day23 {
 
         // Q5. print 0 and 1 in triangle pattern
         // print0and1trainglepattern(10);
+
+        //Q6. print sequence character
+        printsequenceabc(5);
+      
     }
 }
